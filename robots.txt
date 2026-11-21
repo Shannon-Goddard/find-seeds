@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /assets/data/
+
+Sitemap: https://find-seeds.poweredbyci.live/sitemap.xml

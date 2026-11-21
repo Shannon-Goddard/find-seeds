@@ -1,0 +1,17 @@
+# Strain and company images — too large for GitHub (160MB+)
+# Download separately or generate via scripts
+assets/img/strain/
+assets/img/company/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+*.swp
