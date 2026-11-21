@@ -1,7 +1,5 @@
-# Strain and company images — too large for GitHub (160MB+)
-# Download separately or generate via scripts
+# Strain images — large, push separately
 assets/img/strain/
-assets/img/company/
 
 # Python cache
 __pycache__/
