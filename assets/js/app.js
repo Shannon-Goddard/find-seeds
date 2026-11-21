@@ -105,10 +105,10 @@ function renderDropdown(query) {
     return;
   }
 
-  list.innerHTML = matches.map(g => {
+  list.innerHTML = matches.map((g, i) => {
     const vendorCount = [...new Set(g.rows.map(r => r.vendor_name))].length;
     return `
-      <div class="strain-item" data-key="${g.group || slugify(g.displayName)}">
+      <div class="strain-item" data-idx="${i}">
         <img src="${g.imgPath}" alt="${g.displayName}" onerror="this.style.display='none'" />
         <div class="strain-item-info">
           <div class="strain-item-name">${g.displayName}</div>
@@ -121,9 +121,7 @@ function renderDropdown(query) {
 
   list.querySelectorAll('.strain-item').forEach(el => {
     el.addEventListener('click', () => {
-      const key = el.dataset.key;
-      const match = Object.values(strainGroups).find(g => (g.group || slugify(g.displayName)) === key);
-      if (match) selectGroup(match);
+      selectGroup(matches[+el.dataset.idx]);
     });
   });
 }
